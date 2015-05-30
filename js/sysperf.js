@@ -1,14 +1,72 @@
-d3.json('data/fake_users1.json', function(data) {
+var accordionPanelWidth = $("#collapseOne").width();
+
+drawGraphs();
+
+$(window).resize(function() {
+  accordionPanelWidth = $("#collapseOne").width();
+  drawGraphs();
+});
+
+
+function drawGraphs() {
+  d3.json('data/cpu-usage.json', function(data) {
     data = MG.convert.date(data, 'date');
     MG.data_graphic({
-        title: "CPU Usage",
-        description: "This is a simple line chart. You can remove the area portion by adding area: false to the arguments list.",
+        description: "CPU Usage",
         data: data,
-        full_width: true,
+        width: accordionPanelWidth,
         height: 200,
         right: 40,
-        target: document.getElementById('fake_users1'),
+        target: document.getElementById('cpu-usage'),
+        transition_on_update: false,
         x_accessor: 'date',
         y_accessor: 'value'
     });
-});
+  });
+
+  d3.json('data/disk-capacity.json', function(data) {
+    data = MG.convert.date(data, 'date');
+    MG.data_graphic({
+        description: "Disk Capacity",
+        data: data,
+        width: accordionPanelWidth,
+        height: 200,
+        right: 40,
+        target: document.getElementById('disk-capacity'),
+        transition_on_update: false,
+		x_accessor: 'date',
+        y_accessor: 'value'
+    });
+  });
+
+  d3.json('data/memory-usage.json', function(data) {
+    data = MG.convert.date(data, 'date');
+    MG.data_graphic({
+        description: "Memory Usage",
+        data: data,
+        width: accordionPanelWidth,
+        height: 200,
+        right: 40,
+        target: document.getElementById('memory-usage'),
+        transition_on_update: false,
+        x_accessor: 'date',
+        y_accessor: 'value'
+    });
+  });
+
+  d3.json('data/network-traffic.json', function(data) {
+    data = MG.convert.date(data, 'date');
+    MG.data_graphic({
+    	description: "Network Traffic",
+    	data: data,
+        width: accordionPanelWidth,
+    	height: 200,
+    	right: 40,
+    	target: document.getElementById('network-traffic'),
+    	transition_on_update: false,
+    	x_accessor: 'date',
+    	y_accessor: 'value'
+    });
+  });
+
+}
