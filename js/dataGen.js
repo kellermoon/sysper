@@ -3,9 +3,9 @@ var dataGen = (function() {
     var generateCpuUsage = function(numPoints) {
 	    var dataset = [];
 	    var numPoints = numPoints || 100;
-	    var vicinity = 20;
+	    var yIntercept = 20;
         for (var i = 0; i < numPoints; i++) {
-            var newNumber = (Math.random() * 40) + vicinity;
+            var newNumber = (Math.random() * 40) + yIntercept;
             dataset.push(newNumber);
         }
         return dataset;
@@ -14,10 +14,10 @@ var dataGen = (function() {
     var generateDiskCapacity = function(numPoints) {
 	    var dataset = [];
 	    var numPoints = numPoints || 100;
-	    var vicinity = 40;
+	    var yIntercept = 40;
         for (var i = 0; i < numPoints; i++) {
-	        vicinity += .25;
-            var newNumber = (Math.random() * 2) + vicinity;
+	        yIntercept += .25;
+            var newNumber = (Math.random() * 2) + yIntercept;
             dataset.push(newNumber);
         }
         return dataset;
@@ -25,10 +25,10 @@ var dataGen = (function() {
     var generateMemoryUsage = function(numPoints) {
 	    var dataset = [];
 	    var numPoints = numPoints || 100;
-	    var vicinity = 0.1;
+	    var yIntercept = 0.1;
 	    for (var i = 0; i < numPoints; i++) {
-		    vicinity += i / (i + 5);
-            var newNumber = (Math.random() * 20) + vicinity;
+		    yIntercept += i / (i + 5);
+            var newNumber = (Math.random() * 20) + yIntercept;
             dataset.push(newNumber);
         }
         return dataset;
@@ -36,10 +36,10 @@ var dataGen = (function() {
     var generateNetworkTraffic = function(numPoints) {
 	    var dataset = [];
 	    var numPoints = numPoints || 100;
-	    var vacinity = (Math.random() * 40);
+	    var yIntercept = (Math.random() * 40);
         for (var i = 0; i < numPoints; i++) {
             var newNumber = (Math.random() * 15) + 15;
-	        if(newNumber > 25) newNumber += vacinity;
+	        if(newNumber > 25) newNumber += yIntercept;
             dataset.push(newNumber);
         }
         return dataset;
@@ -57,46 +57,46 @@ var dataGen = (function() {
 var numPoints = 50;
 
 
-d3.select("#genCpuUsage")
-    .selectAll("div")
-    .data(dataGen.genCpuUsage(numPoints))
-    .enter()
-    .append("div")
-    .attr("class", "bar")
-    .style("height", function(d) {
-        var barHeight = d * 2;
-        return barHeight + "px";
-    });
+// d3.select("#genCpuUsage")
+//     .selectAll("div")
+//     .data(dataGen.genCpuUsage(numPoints))
+//     .enter()
+//     .append("div")
+//     .attr("class", "bar")
+//     .style("height", function(d) {
+//         var barHeight = d * 2;
+//         return barHeight + "px";
+//     });
 
-d3.select("#genDiskCapacity")
-    .selectAll("div")
-    .data(dataGen.genDiskCapacity(numPoints))
-    .enter()
-    .append("div")
-    .attr("class", "bar")
-    .style("height", function(d) {
-        var barHeight = d * 2;
-        return barHeight + "px";
-    });
+// d3.select("#genDiskCapacity")
+//     .selectAll("div")
+//     .data(dataGen.genDiskCapacity(numPoints))
+//     .enter()
+//     .append("div")
+//     .attr("class", "bar")
+//     .style("height", function(d) {
+//         var barHeight = d * 2;
+//         return barHeight + "px";
+//     });
 
-d3.select("#genMemoryUsage")
-    .selectAll("div")
-    .data(dataGen.genMemoryUsage(numPoints))
-    .enter()
-    .append("div")
-    .attr("class", "bar")
-    .style("height", function(d) {
-        var barHeight = d * 2;
-        return barHeight + "px";
-    });
+// d3.select("#genMemoryUsage")
+//     .selectAll("div")
+//     .data(dataGen.genMemoryUsage(numPoints))
+//     .enter()
+//     .append("div")
+//     .attr("class", "bar")
+//     .style("height", function(d) {
+//         var barHeight = d * 2;
+//         return barHeight + "px";
+//     });
 
-d3.select("#genNetworkTraffic")
-    .selectAll("div")
-    .data(dataGen.genNetworkTraffic(numPoints))
-    .enter()
-    .append("div")
-    .attr("class", "bar")
-    .style("height", function(d) {
-        var barHeight = d * 2;
-        return barHeight + "px";
-    });
+// d3.select("#genNetworkTraffic")
+//     .selectAll("div")
+//     .data(dataGen.genNetworkTraffic(numPoints))
+//     .enter()
+//     .append("div")
+//     .attr("class", "bar")
+//     .style("height", function(d) {
+//         var barHeight = d * 2;
+//         return barHeight + "px";
+//     });
