@@ -1,7 +1,7 @@
 body {
-	color: #8b18f4;
+	color: #5b18f4;
 	font-family: sans-serif;
-	background-color: #eebbff;
+	background-color: #ddccff;
 	padding: 80px 0;
 }
 
@@ -62,25 +62,21 @@ h1.page_header {
 	text-align: center;
 }
 .panel-default {
-  border-color: #bb77cc;
+	border: none;
 }
 .panel-default > .panel-heading {
-	background-image: -webkit-linear-gradient(top,#eebbff 0,#cc88dd 100%);
-	background-image: -o-linear-gradient(top,#eebbff 0,#cc88dd 100%);
-	background-image: -webkit-gradient(linear,left top,left bottom,from(#eebbff),to(#cc88dd));
-	background-image: linear-gradient(to bottom,#eebbff 0,#cc88dd 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffeebbff', endColorstr='#ffcc88dd', GradientType=0);
-	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-	background-repeat: repeat-x;
-	border-color: #bb77cc;
-	color: #9955aa;
+	background-image: none;
+	background-color: #bbbbee;
+	border: none;
+	color: #66b;
 }
 .panel-heading .btn-sm {
 	padding-top: 2px;
 	padding-bottom: 2px;
 }
 .panel-body {
-	background-color: #eeccff;
+	background-color: #eeeeff;
+	border-radius: 0 0 3px 3px;
 }
 .list-group:last-of-type {
 	margin-bottom: 0;
@@ -111,15 +107,15 @@ h1.page_header {
 
 
 #masthead {
-	background-color: #8b148f;
+	background-color: #333366;
 	border: 0;
 	margin-bottom: 40px;
 }
 #masthead .container-fluid {
-	background-color: #8b148f;
+	background-color: #333366;
 }
 #masthead .navbar-brand {
-	color: #ce99ce;
+	color: #ccccff;
 	text-shadow: none;
 	text-transform: lowercase;
 }
@@ -138,10 +134,4 @@ h1.page_header {
 	border-color: #9b309f;
 	box-shadow: none;
 	-webkit-box-shadow: none;
-}
-#welcome,
-#thankyou {
-	color: #8b148f;
-	padding: 20px 0;
-	text-align: center;
 }
