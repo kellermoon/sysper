@@ -22,19 +22,16 @@ MG.data_graphic({
     y_accessor: 'value'
 });
 
-d3.json('data/disk-capacity.json', function(data) {
-	data = MG.convert.date(data, 'date');
-	MG.data_graphic({
-	    description: "Disk Capacity",
-	    data: data,
-	    width: accordionPanelWidth,
-	    height: 200,
-	    right: 40,
-	    target: document.getElementById('disk-capacity'),
-	    transition_on_update: false,
-		x_accessor: 'date',
-	    y_accessor: 'value'
-	});
+MG.data_graphic({
+    description: "Disk Capacity",
+    data: dataGen.genDiskCapacity("week"),
+    width: accordionPanelWidth,
+    height: 200,
+    right: 40,
+    target: document.getElementById('disk-capacity'),
+    transition_on_update: false,
+	x_accessor: 'date',
+    y_accessor: 'value'
 });
 
 d3.json('data/memory-usage.json', function(data) {
