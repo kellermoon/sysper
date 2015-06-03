@@ -1,4 +1,9 @@
 var accordionPanelWidth = $("#collapseOne").width();
+var cpuUsageData = dataGen.genCpuUsage("week");
+var diskCapacityData = dataGen.genCpuUsage("week");
+var memoryUsageData = dataGen.genCpuUsage("week");
+var networkTrafficData = dataGen.genCpuUsage("week");
+
 
 drawGraphs();
 
@@ -12,7 +17,7 @@ function drawGraphs() {
 
 	MG.data_graphic({
 	    description: "CPU Usage",
-	    data: dataGen.genCpuUsage("week"),
+	    data: cpuUsageData,
 	    width: accordionPanelWidth,
 	    height: 200,
 	    right: 40,
@@ -24,7 +29,7 @@ function drawGraphs() {
 
 	MG.data_graphic({
 	    description: "Disk Capacity",
-	    data: dataGen.genDiskCapacity("week"),
+	    data: diskCapacityData,
 	    width: accordionPanelWidth,
 	    height: 200,
 	    right: 40,
@@ -36,7 +41,7 @@ function drawGraphs() {
 
 	MG.data_graphic({
 	    description: "Memory Usage",
-	    data: dataGen.genMemoryUsage("week"),
+	    data: memoryUsageData,
 	    width: accordionPanelWidth,
 	    height: 200,
 	    right: 40,
@@ -48,7 +53,7 @@ function drawGraphs() {
 
 	MG.data_graphic({
 		description: "Network Traffic",
-	    data: dataGen.genNetworkTraffic("week"),
+	    data: networkTrafficData,
 	    width: accordionPanelWidth,
 		height: 200,
 		right: 40,
