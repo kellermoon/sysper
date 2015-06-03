@@ -109,7 +109,7 @@ var dataGen = (function() {
         for (var i = 0; i < tUnit; i++) {
             timeIncrement.setHours(timeIncrement.getHours() + 1);
             var newNumber = (Math.random() * 15) + 15;
-            if(newNumber > 25) {
+            if(newNumber > 28) {
                 newNumber += yIntercept;
             }
             var element = {
