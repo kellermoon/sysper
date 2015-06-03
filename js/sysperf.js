@@ -9,64 +9,62 @@ $(window).resize(function() {
 
 
 function drawGraphs() {
-  d3.json('data/cpu-usage.json', function(data) {
-    data = MG.convert.date(data, 'date');
-    MG.data_graphic({
-        description: "CPU Usage",
-        data: data,
-        width: accordionPanelWidth,
-        height: 200,
-        right: 40,
-        target: document.getElementById('cpu-usage'),
-        transition_on_update: false,
-        x_accessor: 'date',
-        y_accessor: 'value'
-    });
-  });
 
-  d3.json('data/disk-capacity.json', function(data) {
-    data = MG.convert.date(data, 'date');
-    MG.data_graphic({
-        description: "Disk Capacity",
-        data: data,
-        width: accordionPanelWidth,
-        height: 200,
-        right: 40,
-        target: document.getElementById('disk-capacity'),
-        transition_on_update: false,
+MG.data_graphic({
+    description: "CPU Usage",
+    data: dataGen.genCpuUsage("week"),
+    width: accordionPanelWidth,
+    height: 200,
+    right: 40,
+    target: document.getElementById('cpu-usage'),
+    transition_on_update: false,
+    x_accessor: 'date',
+    y_accessor: 'value'
+});
+
+d3.json('data/disk-capacity.json', function(data) {
+	data = MG.convert.date(data, 'date');
+	MG.data_graphic({
+	    description: "Disk Capacity",
+	    data: data,
+	    width: accordionPanelWidth,
+	    height: 200,
+	    right: 40,
+	    target: document.getElementById('disk-capacity'),
+	    transition_on_update: false,
 		x_accessor: 'date',
-        y_accessor: 'value'
-    });
-  });
+	    y_accessor: 'value'
+	});
+});
 
-  d3.json('data/memory-usage.json', function(data) {
-    data = MG.convert.date(data, 'date');
-    MG.data_graphic({
-        description: "Memory Usage",
-        data: data,
-        width: accordionPanelWidth,
-        height: 200,
-        right: 40,
-        target: document.getElementById('memory-usage'),
-        transition_on_update: false,
-        x_accessor: 'date',
-        y_accessor: 'value'
-    });
-  });
+d3.json('data/memory-usage.json', function(data) {
+data = MG.convert.date(data, 'date');
+	MG.data_graphic({
+	    description: "Memory Usage",
+	    data: data,
+	    width: accordionPanelWidth,
+	    height: 200,
+	    right: 40,
+	    target: document.getElementById('memory-usage'),
+	    transition_on_update: false,
+	    x_accessor: 'date',
+	    y_accessor: 'value'
+	});
+});
 
-  d3.json('data/network-traffic.json', function(data) {
-    data = MG.convert.date(data, 'date');
-    MG.data_graphic({
-    	description: "Network Traffic",
-    	data: data,
-        width: accordionPanelWidth,
-    	height: 200,
-    	right: 40,
-    	target: document.getElementById('network-traffic'),
-    	transition_on_update: false,
-    	x_accessor: 'date',
-    	y_accessor: 'value'
-    });
-  });
+d3.json('data/network-traffic.json', function(data) {
+	data = MG.convert.date(data, 'date');
+	MG.data_graphic({
+		description: "Network Traffic",
+		data: data,
+	    width: accordionPanelWidth,
+		height: 200,
+		right: 40,
+		target: document.getElementById('network-traffic'),
+		transition_on_update: false,
+		x_accessor: 'date',
+		y_accessor: 'value'
+	});
+});
 
 }
