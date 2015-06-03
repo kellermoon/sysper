@@ -1,9 +1,8 @@
 var accordionPanelWidth = $("#collapseOne").width();
 var cpuUsageData = dataGen.genCpuUsage("week");
-var diskCapacityData = dataGen.genCpuUsage("week");
-var memoryUsageData = dataGen.genCpuUsage("week");
-var networkTrafficData = dataGen.genCpuUsage("week");
-
+var diskCapacityData = dataGen.genDiskCapacity("week");
+var memoryUsageData = dataGen.genMemoryUsage("week");
+var networkTrafficData = dataGen.genNetworkTraffic("week");
 
 drawGraphs();
 
