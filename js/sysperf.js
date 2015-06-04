@@ -86,4 +86,39 @@ var drawGraphs = (function() {
 })();
 
 
+
+
+
+function refreshGraph(graph, period) {
+	console.log(graph + ", " + period);
+	switch (graph) {
+		case "cpu-period":
+			cpuUsageData = dataGen.genCpuUsage(period);
+			drawGraphs.cpuUsage();
+			break;
+		case "disk-period":
+			diskCapacityData = dataGen.genDiskCapacity(period);
+			drawGraphs.diskCapacity();
+			break;
+		case "mem-period":
+			memoryUsageData = dataGen.genMemoryUsage(period);
+			drawGraphs.memoryUsage();
+			break;
+		case "net-period":
+			networkTrafficData = dataGen.genNetworkTraffic(period);
+			drawGraphs.networkTraffic();
+			break;
+	}
+}
+
+
+$("input[value]").click(
+	function() {
+		var graph = $(this).attr("name");
+		var period = $(this).attr("value");
+		refreshGraph(graph, period);
+	}
+);
+
+
 drawGraphs.all();

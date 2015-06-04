@@ -74,34 +74,17 @@ h1.page_header {
 	padding-top: 2px;
 	padding-bottom: 2px;
 }
+.panel-title .inputs * {
+	display: inline-block;
+	font-size: 12px;
+	margin: 0 5px 0 0;
+}
+.panel-title .inputs label {
+	margin-top: 2px;
+}
 .panel-body {
 	background-color: #eeeeff;
 	border-radius: 0 0 3px 3px;
-}
-.list-group:last-of-type {
-	margin-bottom: 0;
-}
-.list-group-item {
-	border-color: #ded;
-}
-.input-group,
-.input-group input,
-.input-group span {
-	height: 20px;
-	line-height: 20px;
-	margin: 4px 0 0;
-	vertical-align: middle;
-}
-.input-group input {
-	display: inline-block;
-	margin-left: 10px;
-}
-.input-group input:first {
-	margin-left: 0;	
-}
-.input-group span {
-	display: inline-block;
-	margin-left: 5px;
 }
 
 

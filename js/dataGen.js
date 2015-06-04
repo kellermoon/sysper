@@ -1,7 +1,7 @@
 var dataGen = (function() {
 
-    var generateCpuUsage = function(i) {
-        var timeUnit = (i !== "hour" && i !== "week") ? "week" : i;
+    var generateCpuUsage = function(p) {
+        var timeUnit = (p !== "hour" && p !== "week") ? "week" : p;
         var dataset = [];
         var yIntercept = 20;
         var now = new Date();
@@ -29,8 +29,8 @@ var dataGen = (function() {
         return dataset;
     };
 
-    var generateDiskCapacity = function(i) {
-        var timeUnit = (i !== "hour" && i !== "week") ? "week" : i;
+    var generateDiskCapacity = function(p) {
+        var timeUnit = (p !== "hour" && p !== "week") ? "week" : p;
         var dataset = [];
         var yIntercept = 40;
         var now = new Date();
@@ -59,8 +59,8 @@ var dataGen = (function() {
         return dataset;
     };
 
-    var generateMemoryUsage = function(i) {
-        var timeUnit = (i !== "hour" && i !== "week") ? "week" : i;
+    var generateMemoryUsage = function(p) {
+        var timeUnit = (p !== "hour" && p !== "week") ? "week" : p;
         var dataset = [];
         var yIntercept = 0.1;
         var now = new Date();
@@ -89,8 +89,8 @@ var dataGen = (function() {
         return dataset;
     };
 
-    var generateNetworkTraffic = function(i) {
-        var timeUnit = (i !== "hour" && i !== "week") ? "week" : i;
+    var generateNetworkTraffic = function(p) {
+        var timeUnit = (p !== "hour" && p !== "week") ? "week" : p;
         var dataset = [];
         var yIntercept = (Math.random() * 40);
         var now = new Date();
