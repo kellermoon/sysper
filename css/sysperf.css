@@ -1,10 +1,20 @@
+@font-face {
+	font-family: Lithos;
+	src: url(../fonts/LithosPro-Black.otf);
+}
+@font-face {
+	font-family: GillSans;
+	src: url(../fonts/GillSans.ttc);
+}
+
+
 body {
 	color: #5b18f4;
-	font-family: sans-serif;
+	font-family: GillSans, sans-serif;
+	font-weight: 300;
 	background-color: #ddccff;
 	padding: 80px 0;
 }
-
 
 
 .navbar-header {
@@ -77,6 +87,7 @@ h1.page_header {
 .panel-title .inputs * {
 	display: inline-block;
 	font-size: 12px;
+	font-weight: 200;
 	margin: 0 5px 0 0;
 }
 .panel-title .inputs label {
@@ -92,19 +103,23 @@ h1.page_header {
 #masthead {
 	background-color: #333366;
 	border: 0;
+	height: 23px;
+	min-height: 23px;
 	margin-bottom: 40px;
-}
-#masthead .container-fluid {
-	background-color: #333366;
 }
 #masthead .navbar-brand {
 	color: #ccccff;
-	text-shadow: none;
+	font-family: Lithos;
+	font-size: 40px;
+	letter-spacing: 5px;
+	position: relative;
+	top: 0;
+	text-shadow: 2px 2px 2px #333366;
 	text-transform: lowercase;
 }
 #masthead .navbar-brand span {
 	color: #fff;
-	text-shadow: none;
+	text-shadow: 2px 2px 2px #333366;
 }
 #masthead .btn {
 	margin: 10px 0;
