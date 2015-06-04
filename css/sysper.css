@@ -12,7 +12,7 @@ body {
 	color: #5b18f4;
 	font-family: GillSans, sans-serif;
 	font-weight: 300;
-	background-color: #ddccff;
+	background-color: #d7d7ff;
 	padding: 70px 0;
 }
 
@@ -76,9 +76,9 @@ h1.page_header {
 }
 .panel-default > .panel-heading {
 	background-image: none;
-	background-color: #bbbbee;
+	background-color: #bbe;
 	border: none;
-	color: #66b;
+	color: #669;
 }
 .panel-heading .btn-sm {
 	padding-top: 2px;
@@ -94,21 +94,21 @@ h1.page_header {
 	margin-top: 2px;
 }
 .panel-body {
-	background-color: #eeeeff;
+	background-color: #eef;
 	border-radius: 0 0 3px 3px;
 }
 
 
 
 #masthead {
-	background-color: #333366;
+	background-color: #77a;
 	border: 0;
 	height: 23px;
 	min-height: 23px;
 	margin-bottom: 40px;
 }
 #masthead .navbar-brand {
-	color: #ccccff;
+	color: #bbe;
 	font-family: Lithos;
 	font-size: 40px;
 	letter-spacing: 5px;
@@ -133,3 +133,12 @@ h1.page_header {
 	box-shadow: none;
 	-webkit-box-shadow: none;
 }
+
+
+.mg-area1-color {
+	fill: #C30;
+}
+.mg-line1-color {
+	stroke: #c30;
+}
+
