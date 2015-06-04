@@ -112,14 +112,22 @@ h1.page_header {
 	font-family: Lithos;
 	font-size: 40px;
 	letter-spacing: 5px;
+	padding-right: 5px;
 	position: relative;
 	top: 0;
-	text-shadow: 2px 2px 2px #333366;
+	text-shadow: 1px 1px 1px #338;
 	text-transform: lowercase;
 }
 #masthead .navbar-brand span {
 	color: #fff;
-	text-shadow: 2px 2px 2px #333366;
+	text-shadow: 1px 1px 1px #338;
+}
+#masthead .navbar-tagline {
+	color: #558;
+	display: inline-block;
+	font-size: 10px;
+	padding-top: 25px;
+	text-transform: uppercase;
 }
 #masthead .btn {
 	margin: 10px 0;
