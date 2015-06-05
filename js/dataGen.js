@@ -17,8 +17,14 @@ var dataGen = (function() {
             tUnit = Math.abs(now - startTime) / (60*1000);
         }
 
+        timeIncrement = new Date(startTime);
+
         for (var i = 0; i < tUnit; i++) {
-            timeIncrement.setHours(timeIncrement.getHours() + 1);
+            if(timeUnit === "week") {
+                timeIncrement.setHours(timeIncrement.getHours() + 1);
+            } else if(timeUnit === "hour") {
+                timeIncrement.setMinutes(timeIncrement.getMinutes() + 1);
+            }
             var newNumber = (Math.random() * 40) + yIntercept;
             var element = {
                 date: new Date(timeIncrement),
@@ -26,6 +32,7 @@ var dataGen = (function() {
             };
             dataset.push(element);
         }
+
         return dataset;
     };
 
@@ -46,16 +53,23 @@ var dataGen = (function() {
             tUnit = Math.abs(now - startTime) / (60*1000);
         }
 
+        timeIncrement = new Date(startTime);
+
         for (var i = 0; i < tUnit; i++) {
-            timeIncrement.setHours(timeIncrement.getHours() + 1);
-            yIntercept += .25;
-            var newNumber = (Math.random() * 2) + yIntercept;
+            if(timeUnit === "week") {
+                timeIncrement.setHours(timeIncrement.getHours() + 1);
+            } else if(timeUnit === "hour") {
+                timeIncrement.setMinutes(timeIncrement.getMinutes() + 1);
+            }
+            yIntercept -= .025;
+            var newNumber = (Math.random() * 1.25) + yIntercept;
             var element = {
                 date: new Date(timeIncrement),
                 value: newNumber
             };
             dataset.push(element);
         }
+
         return dataset;
     };
 
@@ -76,8 +90,14 @@ var dataGen = (function() {
             tUnit = Math.abs(now - startTime) / (60*1000);
         }
 
+        timeIncrement = new Date(startTime);
+
         for (var i = 0; i < tUnit; i++) {
-            timeIncrement.setHours(timeIncrement.getHours() + 1);
+            if(timeUnit === "week") {
+                timeIncrement.setHours(timeIncrement.getHours() + 1);
+            } else if(timeUnit === "hour") {
+                timeIncrement.setMinutes(timeIncrement.getMinutes() + 1);
+            }
             yIntercept += i / (i + 5);
             var newNumber = (Math.random() * 20) + yIntercept;
             var element = {
@@ -86,6 +106,7 @@ var dataGen = (function() {
             };
             dataset.push(element);
         }
+
         return dataset;
     };
 
@@ -106,8 +127,14 @@ var dataGen = (function() {
             tUnit = Math.abs(now - startTime) / (60*1000);
         }
 
+        timeIncrement = new Date(startTime);
+
         for (var i = 0; i < tUnit; i++) {
-            timeIncrement.setHours(timeIncrement.getHours() + 1);
+            if(timeUnit === "week") {
+                timeIncrement.setHours(timeIncrement.getHours() + 1);
+            } else if(timeUnit === "hour") {
+                timeIncrement.setMinutes(timeIncrement.getMinutes() + 1);
+            }
             var newNumber = (Math.random() * 15) + 15;
             if(newNumber > 28) {
                 newNumber += yIntercept;
@@ -118,6 +145,7 @@ var dataGen = (function() {
             };
             dataset.push(element);
         }
+
         return dataset;
     };
 
