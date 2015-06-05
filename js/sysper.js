@@ -90,7 +90,6 @@ var drawGraphs = (function() {
 
 
 function refreshGraph(graph, period) {
-	console.log(graph + ", " + period);
 	switch (graph) {
 		case "cpu-period":
 			cpuUsageData = dataGen.genCpuUsage(period);
