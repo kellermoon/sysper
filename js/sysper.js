@@ -112,7 +112,7 @@ function refreshGraph(graph, period) {
 }
 
 
-$("input[value]").click(
+$("input[value]").change(
 	function() {
 		var graph = $(this).attr("name");
 		var period = $(this).attr("value");

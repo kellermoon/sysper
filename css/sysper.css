@@ -101,11 +101,19 @@ h1.page_header {
 
 
 #masthead {
-	background-color: #77a;
+	background: -moz-linear-gradient(top, rgba(215,215,255,1) 0%, rgba(215,215,255,1) 65%, rgba(215,215,255,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(215,215,255,1)), color-stop(65%,rgba(215,215,255,1)), color-stop(100%,rgba(215,215,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(215,215,255,1) 0%,rgba(215,215,255,1) 65%,rgba(215,215,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(215,215,255,1) 0%,rgba(215,215,255,1) 65%,rgba(215,215,255,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(215,215,255,1) 0%,rgba(215,215,255,1) 65%,rgba(215,215,255,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(215,215,255,1) 0%,rgba(215,215,255,1) 65%,rgba(215,215,255,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7d7ff', endColorstr='#00d7d7ff',GradientType=0 ); /* IE6-9 */
 	border: 0;
+}
+#masthead .container-fluid {
+	background-color: #77a;
+	padding: 0;
 	height: 23px;
-	min-height: 23px;
-	margin-bottom: 40px;
 }
 #masthead .navbar-brand {
 	color: #bbe;
@@ -113,20 +121,24 @@ h1.page_header {
 	font-size: 40px;
 	letter-spacing: 5px;
 	padding-right: 5px;
+	margin-left: 0;
 	position: relative;
 	top: 0;
 	text-shadow: 1px 1px 1px #338;
 	text-transform: lowercase;
 }
-#masthead .navbar-brand span {
+#masthead .navbar-brand span,
+#masthead .navbar-tagline span {
 	color: #fff;
+}
+#masthead .navbar-brand span {
 	text-shadow: 1px 1px 1px #338;
 }
 #masthead .navbar-tagline {
 	color: #558;
 	display: inline-block;
 	font-size: 10px;
-	padding-top: 25px;
+	padding-top: 9px;
 	text-transform: uppercase;
 }
 #masthead .btn {
